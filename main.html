@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Destination Graduation</title>
-    <script src="https://facebook.github.io/react/js/jsfiddle-integration-babel.js"></script>
+    <script src="https://unpkg.com/react@15.3.1/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.1/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/remarkable@1.6.2/dist/remarkable.min.js"></script>
   </head>
   <body>
     <header>
       <h1>Welcome to Destination Graduation</h1>
+      <link rel="stylesheet" type="text/css" href="main.css">
     </header>
-    <section>
-      there will be an outline section.
-    </section>
-    <section>
-      There will be a section where you you have a endless amount of classes to
-      drap and drop in your outline.
-    </section>
-    <script>
-      var javascipt;
-    </script>
+    <ul>
+      <li><a class="active" id="home" href="#home">Home</a></li>
+      <li><a id="flowchart" target="_blank" href="http://www.ece.iastate.edu/files/2011/08/CprE-14-15-flowchart.pdf">Flowchart</a></li>
+    </ul>
+    <div id="content"></div>
+    <script type="text/babel" src="Scripts/ReactSemester.js"></script>
   </body>
 </html>
