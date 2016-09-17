@@ -26,3 +26,15 @@ li a:hover {
 {
     float: right;
 }
+
+#content {
+    background-color: #ef7c81;
+}
+
+#classCard {
+    background-color: #f4a8ab;
+}
+
+#myClass {
+    align-content: center;
+}

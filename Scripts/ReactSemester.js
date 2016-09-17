@@ -2,16 +2,16 @@
  * Created by Jgn on 9/17/16.
  */
 var data = [
-    {id: 1, class: "Com Sci 363", semester: "Spring", major: true, year: "Sophomore"},
-    {id: 2, class: "Com Sci 230", semester: "Fall", major: true, year: "Junior"}
+    {id: 1, myclass: "Com Sci 363", semester: "Spring", major: true},
+    {id: 2, myclass: "Com Sci 230", semester: "Fall", major: true}
 ];
 
 var SemesterBox = React.createClass({
     render: function() {
         return (
             <div className="semesterBox">
-                <h1>Classes</h1>
-                <ClassList data={this.props.data} />
+                <h3>Fall Semester</h3>
+                <ClassList class="card" data={this.props.data} />
 
             </div>
         );
@@ -22,8 +22,10 @@ var ClassList = React.createClass({
     render: function() {
         var classNodes = this.props.data.map(function(classes) {
             return (
-                <Class className={data.class} key={data.id}>
-                    {data.semester}
+                <Class classes={classes.myclass} key={classes.id}>
+                    {classes.myclass}
+                    {classes.semester}
+
                 </Class>
             );
         });
@@ -38,15 +40,17 @@ var ClassList = React.createClass({
 var Class = React.createClass({
     rawMarkup: function() {
         var md = new Remarkable();
-        var rawMarkup = md.render(this.props.children.toString());
+        var rawMarkup = md.render(
+            this.props.children.toString()
+        );
         return { __html: rawMarkup };
     },
     render: function() {
         return (
-            <div className="classes">
-                <h2 className="className">
-                    {this.props.class}
-                </h2>
+            <div className="card-panel hoverable" id="classCard">
+                <div id="myClass">
+                    {this.props.myclass}
+                    </div>
                 <span dangerouslySetInnerHTML={this.rawMarkup()} />
             </div>
         );

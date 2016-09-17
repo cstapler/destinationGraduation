@@ -8,17 +8,22 @@
     <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
     <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/remarkable@1.6.2/dist/remarkable.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   </head>
   <body>
     <header>
-      <h1>Welcome to Destination Graduation</h1>
       <link rel="stylesheet" type="text/css" href="main.css">
     </header>
-    <ul>
-      <li><a class="active" id="home" href="#home">Home</a></li>
-      <li><a id="flowchart" target="_blank" href="http://www.ece.iastate.edu/files/2011/08/CprE-14-15-flowchart.pdf">Flowchart</a></li>
-    </ul>
-    <div id="content"></div>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Welcome to Destination Graduation</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a id="flowchart" target="_blank" href="http://www.ece.iastate.edu/files/2011/08/CprE-14-15-flowchart.pdf">Flowchart</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="card" id="content"></div>
     <script type="text/babel" src="Scripts/ReactSemester.js"></script>
   </body>
 </html>
