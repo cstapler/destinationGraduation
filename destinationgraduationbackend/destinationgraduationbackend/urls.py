@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers
 from restapi import views
+from dg_auth import views as authviews
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -27,5 +28,6 @@ router.register(r'groups', views.GroupViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^', include('django.contrib.auth.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
