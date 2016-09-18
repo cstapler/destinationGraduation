@@ -31,10 +31,14 @@ li a:hover {
     background-color: #ef7c81;
 }
 
+#fSemester{
+    text-align: center;
+}
+
 #classCard {
     background-color: #f4a8ab;
 }
 
 #myClass {
-    align-content: center;
+    text-align: center;
 }
